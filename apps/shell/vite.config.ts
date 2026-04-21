@@ -11,10 +11,9 @@ export default defineConfig(({mode}) => {
       federation({
         name: 'shell',
         remotes: {
-          // Asegúrate de que la URL sea la correcta y que Analytics esté corriendo (pnpm preview)
-          'analytics': `${env.VITE_ANALYTICS_URL || 'http://localhost:3003'}/assets/remoteEntry.js`,
-          'yard_ops': `${env.VITE_YARD_OPS_URL || 'http://localhost:3001'}/assets/remoteEntry.js`,
-          'move_planning': `${env.VITE_PLANNING_URL || 'http://localhost:3002'}/assets/remoteEntry.js`,
+          'analytics': `${(env.VITE_ANALYTICS_URL || 'http://localhost:3003').replace(/\/$/, '')}/assets/remoteEntry.js`,
+          'yard_ops': `${(env.VITE_YARD_OPS_URL || 'http://localhost:3001').replace(/\/$/, '')}/assets/remoteEntry.js`,
+          'move_planning': `${(env.VITE_PLANNING_URL || 'http://localhost:3002').replace(/\/$/, '')}/assets/remoteEntry.js`,
         },
         shared: {
           react: { singleton: true, requiredVersion: '19.2.5', eager: true },
