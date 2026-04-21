@@ -1,7 +1,7 @@
 {
 	"name": "tos-monorepo",
 	"private": true,
-	"packageManager": "pnpm@9.1.0", 
+	"packageManager": "pnpm@8.15.4", 
 	"engines": {
 		"node": "20.x"
 	},
