@@ -1,4 +1,10 @@
 {
-  "buildCommand": "pnpm --filter analytics build",
-  "outputDirectory": "apps/analytics/dist"
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
 }
