@@ -1,6 +1,3 @@
-# pnpm-workspace.yaml
 packages:
-  # Todos los Microfrontends (Shell, Yard, Planning, Analytics)
-  - 'apps/*'
-  # Lógica compartida, tipos y sistema de diseño
-  - 'packages/*'
+  - "apps/*"
+  - "packages/*"
