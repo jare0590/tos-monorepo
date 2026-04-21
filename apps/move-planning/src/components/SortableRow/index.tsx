@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-// 1. Importamos la configuración y el tipo
 import { statusConfig, type StatusType } from '../../types/status'; 
 import LoadingSpinner from '../LoadingSpinner';
 
@@ -29,7 +28,6 @@ export default function SortableRow({
         <td className="px-6 py-4 text-slate-600">{task.from}</td>
         <td className="px-6 py-4 text-slate-600">{task.to}</td>
         <td className="px-6 py-4">
-          {/* Ahora statusConfig y StatusType ya están definidos aquí */}
           <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${statusConfig[task.status as StatusType]}`}>
             <span className={`w-1.5 h-1.5 rounded-full ${task.status === 'Disponible' ? 'bg-emerald-500' : task.status === 'Bloqueado' ? 'bg-rose-500' : 'bg-amber-500'}`}></span>
             {task.status}

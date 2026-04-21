@@ -27,15 +27,13 @@ export default defineConfig(({mode}) => {
       target: 'esnext',
       minify: false,
       cssCodeSplit: false,
-      // ELIMINA la sección rollupOptions: { external: [...] } de aquí
     },
     resolve: {
-      // ELIMINA los alias manuales y usa esto:
       dedupe: ['react', 'react-dom'],
     },
     server: {
       port: 3000,
-      strictPort: true, // This avoids Vite jumps to another port if the 3001 is busy
+      strictPort: true,
     },
     preview: {
       port: 3000,

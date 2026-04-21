@@ -14,7 +14,6 @@ export default function App() {
         // Obtenemos los datos puros del servicio sin transformaciones
         const data = await ContainerService.getAll();
         
-        // En Yard-Ops no necesitamos el mapeo de "tasks" de move-planning
         setTasks(data); 
       } catch (err) {
         setError('Error al conectar con el servidor de patio');
@@ -51,10 +50,8 @@ export default function App() {
           ⚓ Inventario de Patio
         </h2>
         
-        {/* USAMOS 'tasks' que es nuestro estado cargado asíncronamente */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tasks.map(container => (
-            /* Ahora ContainerCard recibirá id, type y location originales */
             <ContainerCard key={container.id} {...container} />
           ))}
         </div>

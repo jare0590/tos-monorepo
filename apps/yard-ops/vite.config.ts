@@ -15,8 +15,8 @@ export default defineConfig({
       shared: {
         react: {
           singleton: true,
-          strictVersion: true, // Esto obliga a que la versión coincida exactamente
-          requiredVersion: '19.2.5', // Usa el número exacto que viste en el root package.json
+          strictVersion: true,
+          requiredVersion: '19.2.5',
         },
         'react-dom': {
           singleton: true,
@@ -31,7 +31,6 @@ export default defineConfig({
       '@tos/ui-config': path.resolve(__dirname, '../../packages/ui-config/src/index.ts'),
       '@tos/data-layer': path.resolve(__dirname, '../../packages/data-layer/src/index.ts'),
     },
-    // Esto refuerza que use la misma copia de React incluso en desarrollo
     dedupe: ['react', 'react-dom'],
   },
   server: {
@@ -44,7 +43,7 @@ export default defineConfig({
   },
   build: {
     modulePreload: false,
-    target: 'esnext', // Crucial para que el plugin de federación pueda inyectar código
+    target: 'esnext',
     minify: false,
     cssCodeSplit: false,
   },

@@ -28,7 +28,6 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    // ELIMINA los alias manuales y usa esto:
     dedupe: ['react', 'react-dom'],
     alias: {
       "@tos/data-layer": path.resolve(__dirname, "../../packages/data-layer/src"),

@@ -10,7 +10,7 @@ function App() {
   const [activeModule, setActiveModule] = useState<ModuleType>('analytics');
   const [notification, setNotification] = useState<{ message: string } | null>(null);
 
-  // Mantenemos tu sistema de eventos para las alertas globales
+  // Mantenemos el sistema de eventos para las alertas globales
   useEffect(() => {
     const handleUpdate = (event: any) => {
       setNotification({ message: event.detail.message || 'Operación exitosa' });
@@ -83,7 +83,6 @@ function App() {
 
         {/* Renderizado Condicional con Suspense */}
         <div className="flex-1 overflow-y-auto bg-slate-50 p-2 lg:p-4"> 
-          {/* Eliminamos 'max-w-[1400px]' y cambiamos 'rounded-3xl' por algo más discreto si prefieres */}
           <div className="w-full bg-white shadow-sm border border-slate-200 overflow-hidden min-h-[90vh]">
             <Suspense fallback={
               <div className="flex flex-col items-center justify-center h-full p-20 space-y-4">

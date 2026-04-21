@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
-// Importamos el servicio y los tipos necesarios
 import { ContainerService } from '@tos/data-layer';
 import { KPICard } from '@tos/ui-config';
-
-// Importaciones de DND Kit con el fix de tipos para Vite 8
 import { 
   DndContext, 
   closestCenter, 
@@ -67,7 +64,7 @@ export default function App() {
   const handleAssign = async (taskId: string) => {
     setLoadingId(taskId);
     try {
-      // Simulamos la llamada al servicio de actualización
+      // Simulacion de la llamada al servicio de actualización
       await ContainerService.updateStatus(taskId.replace('task-', ''), 'En Tránsito');
       
       setTasks(prev => prev.map(t => 
