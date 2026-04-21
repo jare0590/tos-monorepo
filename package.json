@@ -3,7 +3,7 @@
 	"private": true,
 	"packageManager": "pnpm@9.1.0", 
 	"engines": {
-		"node": ">=20.0.0"
+		"node": "20.x"
 	},
 	"devDependencies": {
 		"@originjs/vite-plugin-federation": "^1.4.1",
