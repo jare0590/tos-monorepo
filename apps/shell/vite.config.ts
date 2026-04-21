@@ -11,9 +11,9 @@ export default defineConfig(({mode}) => {
       federation({
         name: 'shell',
         remotes: {
-          'analytics': `${(env.VITE_ANALYTICS_URL || 'http://localhost:3003').replace(/\/$/, '')}/assets/remoteEntry.js`,
-          'yard_ops': `${(env.VITE_YARD_OPS_URL || 'http://localhost:3001').replace(/\/$/, '')}/assets/remoteEntry.js`,
-          'move_planning': `${(env.VITE_PLANNING_URL || 'http://localhost:3002').replace(/\/$/, '')}/assets/remoteEntry.js`,
+          'analytics': 'https://tos-monorepo-analytics.vercel.app/assets/remoteEntry.js',
+          'yard_ops': 'https://tos-yard-ops.vercel.app/assets/remoteEntry.js',
+          'move_planning': 'https://tos-move-planning.vercel.app/assets/remoteEntry.js',
         },
         shared: {
           react: { singleton: true, requiredVersion: '19.2.5', eager: true },
