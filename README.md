@@ -23,4 +23,4 @@ Plataforma de gestión portuaria de alta densidad diseñada para la **Estrategia
 4. Ejecutar tests: `pnpm test`
 
 ## 🌐 Despliegue
-- **URL Shell:** [Tu URL de Vercel aquí]
+- **URL Shell:** https://tos-shell.vercel.app/
