@@ -1,10 +1,10 @@
 {
 	"name": "tos-monorepo",
 	"private": true,
-	"packageManager": "pnpm@8.15.4", 
 	"engines": {
 		"node": "20.x"
 	},
+	"packageManager": "pnpm@8.15.6",
 	"devDependencies": {
 		"@originjs/vite-plugin-federation": "^1.4.1",
 		"@tailwindcss/postcss": "^4.2.2",
