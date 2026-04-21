@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Obligatorio para que Tailwind detecte las clases en tu librería de UI */
+@source "../../../packages/ui-config/src";
+
+@theme {
+  --color-port-dark: #0f172a;
+  --color-port-accent: #f97316;
+}
+
+/* Limpieza total del root de Vite */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Quitamos el center por defecto */
+}
+
+body {
+  margin: 0;
+  background-color: #f8fafc; /* slate-50 */
+}
